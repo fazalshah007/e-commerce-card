@@ -1,12 +1,18 @@
+import { Route, Routes } from 'react-router-dom'
 import './tailwind.css'
+import AllProducts from './screens/AllProducts'
+import Product from './screens/Product'
 function App() {
 
 
   return (
     <>
-      <h1 class="text-3xl font-bold text-green-400">
-        card project continue
-      </h1>
+
+      <Routes>
+        <Route path='/' element={ <AllProducts /> } />
+        <Route path='product/:id' element={ <Product /> } />
+      
+      </Routes>
     </>
   )
 }
